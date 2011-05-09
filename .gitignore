@@ -1,2 +1,6 @@
 webapp/.DS_Store
 .DS_Store
+webapp/WEB-INF/railo/logs/
+webapp/WEB-INF/railo/cfclasses/
+db/
+build/staxcat/

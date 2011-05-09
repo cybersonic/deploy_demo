@@ -1,3 +1,10 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0"?>
 <search>
+    <collection created="{ts '2011-04-03 13:54:11'}" language="english"
+        lastUpdate="{ts '2011-04-03 13:55:46'}" name="wikicollection" path="/Users/markdrew/Dropbox/Projects/railo/cloudbees/markdrew_railo/webapp/WEB-INF/railo/context/admin/WikiCollection">
+        <index category="" categoryTree=""
+            extensions="html,htm,cfm,cfml"
+            id="path-50534379ea0f12c11b436e5cda7570e6" key="../"
+            language="english" type="path" urlpath="http://wiki.getrailo.com"/>
+    </collection>
 </search>

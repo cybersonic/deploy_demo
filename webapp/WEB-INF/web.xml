@@ -60,7 +60,14 @@
 		<servlet-name>CFMLServlet</servlet-name>
 		<url-pattern>*.cfc</url-pattern>
 	</servlet-mapping> 
-	
+	<servlet-mapping>
+		<servlet-name>CFMLServlet</servlet-name>
+		<url-pattern>/index.cfm/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CFMLServlet</servlet-name>
+		<url-pattern>/rewrite.cfm/*</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>AMFServlet</servlet-name>
 		<url-pattern>/openamf/gateway/*</url-pattern>
@@ -81,9 +88,23 @@
     <url-pattern>/messagebroker/*</url-pattern>
   </servlet-mapping>
 	
+		<!--
+	<filter>
+	        <filter-name>UrlRewriteFilter</filter-name>
+	        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+			<init-param>
+			            <param-name>confReloadCheckInterval</param-name>
+			            <param-value>60</param-value>
+            </init-param>
+	</filter>
+	<filter-mapping>
+	     <filter-name>UrlRewriteFilter</filter-name>
+	     <url-pattern>/*</url-pattern>
+	     <dispatcher>REQUEST</dispatcher>
+	     <dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
 	
-	
-	<!--
+
 	<servlet-mapping> 
 		<servlet-name>FileServlet</servlet-name> 
 		<url-pattern>/</url-pattern> 

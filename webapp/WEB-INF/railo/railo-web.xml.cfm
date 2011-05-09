@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<railo-configuration version="2.0">
+<railo-configuration password="7ee3f4f19bebb57858f44ec9b0e7b6cdcd37073f7f56af4e2e5b058fc0d23858" version="2.0">
+  <cfabort/>
 
 <!-- 
 Path placeholders:
@@ -32,7 +33,11 @@ Path placeholders:
 <!--	or ask your database distributor 																-->
 
 	<data-sources>
-	</data-sources>
+	<data-source allow="511" blob="false" class="org.gjt.mm.mysql.Driver" clob="false" connectionTimeout="1" custom="useUnicode=true&amp;characterEncoding=UTF-8" database="railo_docs_examples" dsn="jdbc:mysql://{host}:{port}/{database}" host="ec2-75-101-156-134.compute-1.amazonaws.com" metaCacheTimeout="60000" name="railo_doc_examples" password="encrypted:167af14a5f42574dca5cf9defce5be9054526c76ef2260d8caf4ecf13a92f78f" port="3306" storage="false" username="markdrew" validate="false"/>
+  
+  
+  <data-source allow="511" blob="false" class="org.gjt.mm.mysql.Driver" clob="false" connectionTimeout="1" custom="useUnicode=true&amp;characterEncoding=UTF-8" database="railo_quick_docs" dsn="jdbc:mysql://{host}:{port}/{database}" host="localhost" metaCacheTimeout="60000" name="railo_quick_docs" password="encrypted:e657df5b39581da7b8f385df4471d1f1aa03cc0ea36af3af2b8e8e7f70ea7e84" port="3306" storage="false" username="root" validate="false"/>
+  </data-sources>
 	
 	<resources>
     	<!--
@@ -112,7 +117,8 @@ Path placeholders:
 			for example when you define physical you can partiquel overwrite the archive.
 		-->
 		<mapping archive="{railo-web}/context/railo-context.ra" physical="{railo-web}/context/" primary="physical" readonly="yes" toplevel="yes" trusted="true" virtual="/railo-context/"/>
-	</mappings>	
+	<mapping physical="/Users/markdrew/Dropbox/WebRoot/markdrew_railo/foo" primary="physical" toplevel="true" trusted="false" virtual="/fnar"/>
+  </mappings>	
 	
 	<custom-tag>
 		<mapping physical="{railo-web}/customtags/" trusted="yes"/>
@@ -154,4 +160,5 @@ Path placeholders:
 		
 	<application application-log="{railo-web}/logs/application.log" application-log-level="error" cache-directory="{railo-web}/cache/" cache-directory-max-size="100mb" exception-log="{railo-web}/logs/exception.log" exception-log-level="error" trace-log="{railo-web}/logs/trace.log" trace-log-level="info"/>
 	
+<orm autogenmap="true" cache-config="" cache-provider="" catalog="" db-create="dropcreate" dialect="" event-handler="" event-handling="false" flush-at-request-end="true" log-sql="false" orm-config="" save-mapping="false" schema="" secondary-cache-enable="false" sql-script="" use-db-for-mapping="true"/>
 </railo-configuration>

@@ -10,7 +10,8 @@ Path placeholders:
 	{web-context-hash}: hash of the web context
 
 -->
-<railo-configuration version="2.0">
+<railo-configuration password="24ca0438367ae8765bde06f1ca53d8678ce55093c635187b820a50aea118cbc9" version="2.0">
+  <cfabort/>
 
 	<!--
 	system:
@@ -249,6 +250,6 @@ Path placeholders:
 	-->
 	<application listener-mode="curr2root" listener-type="mixed"/>
 
-	<update location="http://www.getrailo.org" type="manual"/>
+	<update location="http://dev.getrailo.org" type="manual"/>
 
 </railo-configuration>

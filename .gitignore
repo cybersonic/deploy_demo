@@ -4,3 +4,7 @@ webapp/WEB-INF/railo/logs/
 webapp/WEB-INF/railo/cfclasses/
 db/
 build/staxcat/
+webapp/WEB-INF/lib/railo-server/context/logs/
+build/webapp.war
+build/webapp-src.zip
+webapp/WEB-INF/railo/context/admin/WikiCollection/

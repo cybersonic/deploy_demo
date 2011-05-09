@@ -108,17 +108,11 @@ component extends="Controller"{
 	
 	private function getItemData(item){
 		
-		oItem = model('item').new(item=item);
-		
-		dump(oItem.exists());
-		abort;
-		//	var oItem = EntityLoad("Item",item, true);
-			if(isNull(oItem)){
-				//Create The identity
-				oItem = EntityNew("Item", {item=item});
-				EntitySave(oItem);
-				ormFlush();
-			}	
-			return oItem;
+		oItem = model('item').findOne(item=item);
+		if(!isObject(oItem)){
+			oItem = model('item').new(item=item)
+			oItem.save();
+		}
+		return oItem;
 	}
 }
